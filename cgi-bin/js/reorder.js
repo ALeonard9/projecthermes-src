@@ -18,7 +18,7 @@ $(document).ready(function() { // begin document ready
     }
     });
 
-    $('li').on('mouseover',function() {
+    $('#list-items').on('mouseover',function() {
     $(this).css(
         {
             'backgroundColor' : 'rgb(204, 255, 204);',

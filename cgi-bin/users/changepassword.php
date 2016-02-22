@@ -12,12 +12,12 @@ $user_id = $_SESSION['userid'];
 echo "<!DOCTYPE html>
 <html lang='en'>
 <head>
-        <title id='pageTitle'>LeoNine Studios</title>";
+        <title id='pageTitle'>PostersASAP</title>";
 include('../header.php');
-echo "</head><body><div class='container'>";
+echo "</head><body>";
 include('../navigation.php');
 
-echo "<div class='col-md-3'></div><div class='col-md-6'>
+echo "<div class='container'><div class='col-md-3'></div><div class='col-md-6'>
 <form class='form-signin' action='changepassword.php' id='password_form' method='POST' novalidate='novalidate'>
 <div class='form-group'>
   <label for='amount'>Password</label>
