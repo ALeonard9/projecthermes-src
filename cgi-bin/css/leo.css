@@ -49,3 +49,9 @@ ul { list-style-type: none; }
 .btn-inverse.active {
   color: rgba(255, 255, 255, 0.75);
 }
+ .product {
+   height: 200px;
+   padding:10px;
+   font-size: 150%;
+   color: white;
+ }

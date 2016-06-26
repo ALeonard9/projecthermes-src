@@ -1,10 +1,3 @@
-<?php
-
-session_start();
-ob_start();
-
-include 'connectToDB.php';
-?>
 <!DOCTYPE html>
 <html lang='en'>
 <head>
@@ -47,14 +40,15 @@ include 'connectToDB.php';
 
 </head>
 <body>
-<style scoped>
-	@media (min-width: 768px) {
-			.on-the-fly-behavior {
-					margin-left: calc(50% - 90px);
-			}
-	}
-</style>
+
 		<!-- Static navbar -->
+		<style scoped>
+			@media (min-width: 768px) {
+			    .on-the-fly-behavior {
+			        margin-left: calc(50% - 90px);
+			    }
+			}
+			</style>
 		<nav class='navbar navbar-inverse navbar-static-top'>
 			<div class='container-fluid'>
 				<div class='navbar-header'>
@@ -68,54 +62,48 @@ include 'connectToDB.php';
 				</div>
 				<div id='navbar' class='navbar-collapse collapse'>
 					<ul class='nav navbar-nav navbar-right'>
-<?php
-            if (isset($_SESSION['userid']))
-            {
-              echo "<li class='dropdown'>
-                <a href='#' class='dropdown-toggle' data-toggle='dropdown' role='button' aria-haspopup='true' aria-expanded='false'>Welcome " . $_SESSION['username'] . " <span class='caret'></span></a>
-                <ul class='dropdown-menu'>
-                  <li><a href='./users/profile.php'>My Profile</a></li>
-                  <li><a href='./users/logout.php''>Log Out</a></li>
-                </ul>
-              </li>";
-            }
-            else
-            {
-            echo "<li><a href='./users/signin.php'>Sign In</a></li>";
-            }
-?>
-						<li><a href='checkout/cart.php'><span class='glyphicon glyphicon-shopping-cart' style='color:white'></span></a></li>
-          </ul>
+							<!-- <li><a href='products/posters.php' style='background-color: #5cb85c'><span style='color:white'>Posters</span></a></li>
+							<li><a href='products/banners.php' style='background-color: #5bc0de'><span style='color:white'>Banners</span></a></li>
+							<li><a href='products/vinyl.php' style='background-color: #F89406'><span style='color:white'>Vinyl</span></a></li> -->
+							<li class='dropdown'>
+								<a href='#' class='dropdown-toggle' data-toggle='dropdown' role='button' aria-haspopup='true' aria-expanded='false'>Welcome Bobby <span class='caret'></span></a>
+								<ul class='dropdown-menu'>
+									<li><a href='./users/profile.php'>My Profile</a></li>
+									<li><a href='./users/logout.php'>Log Out</a></li>
+								</ul>
+							</li>
+							<li><a href='checkout/cart.php'><span class='glyphicon glyphicon-shopping-cart' style='color:white'></span></a></li>
+					</ul>
 				</div><!--/.nav-collapse -->
 			</div><!--/.container-fluid -->
 		</nav>
+	<div class='container text-center'>
+	  <div class='col-md-4'>
+			<div id="product1" class='col-md-12 product img-rounded' style='background-color: #5cb85c;display:none;'>Posters</br>
+				<img class='img-rounded' src="images/poster3.jpg" style="width:200px;height:150px;">
+			</div>
+		</div>
+		<div class='col-md-4'>
+			<div id="product2" class='col-md-12 product img-rounded' style='background-color: #5bc0de;display:none;'>Banners</br>
+				<img class='img-rounded' src="images/banner3.jpg" style="width:200px;height:150px;">
+			</div>
+		</div>
+		<div class='col-md-4'>
+			<div id="product3" class='col-md-12 product img-rounded' style='background-color: #F89406;display:none;'>Vinyl</br>
+				<img class='img-rounded' src="images/vinyl3.jpg" style="width:200px;height:150px;">
+			</div>
+		</div>
+		<div class='col-md-12'  style='font-size: 200%;'></br><b>Printing made <i>simple</i>. </b>
+			</br> 1. Select a product.
+			</br> 2. Upload your photo.
+			</br> 3. We print and ship as soon as humanly possible.
+			</br>
+		</div>
+  </div>
 
-		<div class='container text-center'>
-		  <div class='col-md-4'>
-				<div id="product1" class='col-md-12 product img-rounded' style='background-color: #5cb85c;display:none;'>Posters</br>
-					<img class='img-rounded' src="images/poster3.jpg" style="width:200px;height:150px;">
-				</div>
-			</div>
-			<div class='col-md-4'>
-				<div id="product2" class='col-md-12 product img-rounded' style='background-color: #5bc0de;display:none;'>Banners</br>
-					<img class='img-rounded' src="images/banner3.jpg" style="width:200px;height:150px;">
-				</div>
-			</div>
-			<div class='col-md-4'>
-				<div id="product3" class='col-md-12 product img-rounded' style='background-color: #F89406;display:none;'>Vinyl</br>
-					<img class='img-rounded' src="images/vinyl3.jpg" style="width:200px;height:150px;">
-				</div>
-			</div>
-			<div class='col-md-12'  style='font-size: 200%;'></br><b>Printing made <i>simple</i>. </b>
-				</br> 1. Select a product.
-				</br> 2. Upload your photo.
-				</br> 3. We print and ship as soon as humanly possible.
-				</br>
-			</div>
-	  </div>
-		<script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js'></script>
-		<script src='./js/bootstrap.min.js'></script>
-		<script src='./js/leo.js'></script>
-		<script src='./js/ie10-viewport-bug-workaround.js'></script>
-	</body>
-	</html>
+	<script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js'></script>
+	<script src='./js/bootstrap.min.js'></script>
+	<script src='./js/leo.js'></script>
+	<script src='./js/ie10-viewport-bug-workaround.js'></script>
+</body>
+</html>
