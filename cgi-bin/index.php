@@ -92,19 +92,19 @@ include 'connectToDB.php';
 
 		<div class='container text-center'>
 		  <div class='col-md-4'>
-				<div id="product1" class='col-md-12 product img-rounded' style='background-color: #5cb85c;display:none;'>Posters</br>
+				<a href='./products/customize.php?p=poster'><div id="product1" class='col-md-12 product img-rounded' style='background-color: #5cb85c;display:none;'>Posters</br>
 					<img class='img-rounded' src="images/poster3.jpg" style="width:200px;height:150px;">
-				</div>
+				</div></a>
 			</div>
 			<div class='col-md-4'>
-				<div id="product2" class='col-md-12 product img-rounded' style='background-color: #5bc0de;display:none;'>Banners</br>
+				<a href='./products/customize.php?p=banner'><div id="product2" class='col-md-12 product img-rounded' style='background-color: #5bc0de;display:none;'>Banners</br>
 					<img class='img-rounded' src="images/banner3.jpg" style="width:200px;height:150px;">
-				</div>
+				</div></a>
 			</div>
 			<div class='col-md-4'>
-				<div id="product3" class='col-md-12 product img-rounded' style='background-color: #F89406;display:none;'>Vinyl</br>
+				<a href='./products/customize.php?p=vinyl'><div id="product3" class='col-md-12 product img-rounded' style='background-color: #F89406;display:none;'>Vinyl</br>
 					<img class='img-rounded' src="images/vinyl3.jpg" style="width:200px;height:150px;">
-				</div>
+				</div></a>
 			</div>
 			<div class='col-md-12'  style='font-size: 200%;'></br><b>Printing made <i>simple</i>. </b>
 				</br> 1. Select a product.
