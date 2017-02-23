@@ -1,3 +1,2 @@
-# projecthermes-src
-
-Built via Jenkins
+# a work in progress...
+UNDER CONSTRUCTION
